@@ -4,332 +4,782 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riachuelo</title>
+    <title>Mario Bros</title>
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
     <script>
       document.write(
         '<script src="http://' +
-          (location.host || "localhost").split(":")[0] +
+          (location.host || 'localhost').split(':')[0] +
           ':35729/livereload.js?snipver=1"></' +
-          "script>"
+          'script>',
       );
     </script>
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="assets/riachuelo.svg" alt="" />
-      </h1>
-      <input type="search" placeholder="O quê você está procurando" />
-      <nav>
-        <ul>
-          <li><a href="">Novidades</a></li>
-          <li><a href="">Feminimo</a></li>
-          <li><a href="">Masculino</a></li>
-          <li><a href="">Infantil</a></li>
-          <li><a href="">Moda Íntima</a></li>
-          <li><a href="">Calçados</a></li>
-          <li><a href="">Acessórios e Relógios</a></li>
-          <li><a href="">Beleza e Perfume</a></li>
-          <li><a href="">Casa Riachuelo</a></li>
-          <li><a href="">Eletrônicos</a></li>
-          <li><a href="">Personagens</a></li>
-          <li><a href="">Outlet</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="breadcrumbs">
+    <header class="Header">
+      <div class="Header__Topbar">
+        <nav class="Topbar__Menu">
+          <ul class="Topbar__Menu--Left">
+            <li class="Topbar__Item">
+              <a href="#" class="Topbar__Link">Baixe o App</a>
+            </li>
+            <li class="Topbar__Item">
+              <a href="#" class="Topbar__Link">Carter's</a>
+            </li>
+            <li class="Topbar__Item">
+              <a href="#" class="Topbar__Link">Casa Riachuelo</a>
+            </li>
+            <li class="Topbar__Item">
+              <a href="#" class="Topbar__Link">Básicos</a>
+            </li>
+            <li class="Topbar__Item">
+              <a href="#" class="Topbar__Link">Jeans</a>
+            </li>
+          </ul>
+          <ul class="Topbar__Menu--Right">
+            <li class="Topbar__Item">
+              <img class="Topbar__img" src="assets/whatsappIcon.svg" />
+              <a href="#" class="Topbar__Link">Compre pelo Whatsapp</a>
+            </li>
+            <li class="Topbar__Item">
+              <img class="Topbar__img" src="assets/phoneIcon.svg" />
+              <a href="#" class="Topbar__Link">Atendimento</a>
+            </li>
+            <li class="Topbar__Item">
+              <img class="Topbar__img" src="assets/localizationIcon.svg" />
+              <a href="#" class="Topbar__Link">Nossas Lojas</a>
+            </li>
+            <li class="Topbar__Item">
+              <img class="Topbar__img" src="assets/wifiIcon.svg" />
+              <a href="#" class="Topbar__Link">Blog</a>
+            </li>
+            <li class="Topbar__Item">
+              <img class="Topbar__img" src="assets/credit-card.svg" />
+              <a href="#" class="Topbar__Link">Cartao Riachuelo</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="Header__Container">
+        <div class="Header__Menu--Desktop">
+          <h1 class="Menu__Logo--Desktop">
+            <img src="assets/riachuelo.svg" alt="" />
+          </h1>
+        </div>
+        <div class="Header__Menu--Mobile">
+          <input type="checkbox" id="check" />
+          <label class="Menu__Button" for="check">
+            <img class="Menu__Button--img" src="assets/menu.svg" id="Menu" />
+            <img class="Menu__Button--img" src="assets/close.svg" id="Close" />
+          </label>
+          <div class="Sidebar__Back"></div>
+          <div class="Sidebar__Menu">
+            <ul class="Sidebar__List">
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Novidades
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Feminino
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Masculino
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Infantil
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Moda Íntima
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Calçados
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Acessórios e Relógios
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Beleza e Perfume
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Casa Riachuelo
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Eletrônicos
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Personagens
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+              <li class="Sidebar__Item">
+                <a href="" class="Sidebar__Link">
+                  Outlet
+                  <img class="Sidebar__Filter" src="assets/filter.svg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <h1>
+            <img src="assets/rchlo.svg" alt="" />
+          </h1>
+          <div class="Menu__Icons__Container">
+            <img class="Menu__Icons" src="assets/avatarIcon.svg" />
+            <img class="Menu__Icons" src="assets/bagIcon.svg" />
+          </div>
+          <div class="Mobile__Searchbar">
+            <img class="Searchbar__Icon" src="assets/search.svg" />
+            <input
+              class="Menu__Searchbar"
+              type="search"
+              placeholder="O quê você está procurando"
+            />
+          </div>
+        </div>
+        <div class="Header__Searchbar">
+          <img class="Searchbar__Icon" src="assets/search.svg" />
+          <input
+            class="Menu__Searchbar"
+            type="search"
+            placeholder="O quê você está procurando"
+          />
+        </div>
         <nav>
-          <ol>
-            <li><a href="">Home</a></li>
-            <li><a href="">Infantil</a></li>
-            <li><a href="">Personagens</a></li>
-            <li>Mario Bros</li>
+          <ul class="Menu__List">
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Novidades</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Feminimo</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Masculino</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Infantil</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Moda Íntima</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Calçados</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Acessórios e Relógios</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Beleza e Perfume</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Casa Riachuelo</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Eletrônicos</a>
+            </li>
+            <li class="Menu__Item">
+              <a class="Menu__Link" href="">Personagens</a>
+            </li>
+            <li class="Menu__Item"><a class="Menu__Link" href="">Outlet</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="Main">
+      <section class="Main__Breadcrumbs">
+        <nav class="Breadcrumbs__Menu">
+          <ol class="Breadcrumbs__List">
+            <li class="Breadcrumb__Item">
+              <a class="Breadcrumbs__Link" href="">Home</a>
+            </li>
+            <li class="Breadcrumb__Item">
+              <span class="Breadcrumbs__Separator">/</span>
+            </li>
+            <li class="Breadcrumb__Item">
+              <a class="Breadcrumbs__Link" href="">Infantil</a>
+            </li>
+            <li class="Breadcrumb__Item">
+              <span class="Breadcrumbs__Separator">/</span>
+            </li>
+            <li class="Breadcrumb__Item">
+              <a class="Breadcrumbs__Link" href="">Personagens</a>
+            </li>
+            <li class="Breadcrumb__Item">
+              <span class="Breadcrumbs__Separator">/</span>
+            </li>
+            <li class="Breadcrumb__Item">Mario Bros</li>
           </ol>
         </nav>
       </section>
-      <section class="filters">
-        <ul>
-          <li>Tamanho</li>
-          <li>Cor</li>
-          <li>Departamento</li>
-          <li>Categoria</li>
-          <li>Manga</li>
+      <section class="Main__Filters">
+        <ul class="Filter__List">
+          <li class="Filter__Item">
+            <a class="Filter__Link">Tamanho</a>
+            <img class="Filter__Img" src="assets/filter.svg" />
+          </li>
+          <li class="Filter__Item">
+            <a class="Filter__Link">Cor</a>
+            <img class="Filter__Img" src="assets/filter.svg" />
+          </li>
+          <li class="Filter__Item">
+            <a class="Filter__Link">Departamento</a>
+            <img class="Filter__Img" src="assets/filter.svg" />
+          </li>
+          <li class="Filter__Item">
+            <a class="Filter__Link">Categoria</a>
+            <img class="Filter__Img" src="assets/filter.svg" />
+          </li>
+          <li class="Filter__Item">
+            <a class="Filter__Link">Manga</a>
+            <img class="Filter__Img" src="assets/filter.svg" />
+          </li>
+          <li class="Filter__Item">
+            <a class="Filter__Link">Mais Filtros</a>
+            <img class="Filter__Img" src="assets/mixerIcon.svg" />
+          </li>
         </ul>
       </section>
 
-      <section class="products">
-        <ol>
-          <li>
-            <div>
-              <img src="assets/c1.webp" alt="Camisa 1" />
-              <p>
+      <section class="Products">
+        <h2 class="Product__Title">MARIO BROS</h2>
+        <ol class="Products__List">
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c1.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c2.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c2.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c3.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c3.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c4.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c4.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c5.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c5.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c6.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c6.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c7.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c7.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c8.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c8.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c9.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c9.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c10.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c10.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c11.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c11.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
-          <li>
-            <div>
-              <img src="assets/c12.webp" alt="Camisa 1" />
-              <p>
+          <li class="Products__Item">
+            <div class="Products__Card">
+              <img class="Products__Img" src="assets/c12.webp" alt="Camisa 1" />
+              <p class="Products__Name">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="Products__Price">R$ 199,90</p>
             </div>
           </li>
         </ol>
       </section>
     </main>
-    <footer>
-      <div class="offers">
-        <p>Receba ofertas e novidades por e-mail</p>
-        <form action="/">
-          <input type="email" placeholder="Digite aqui seu e-mail" />
-          <button type="submit">Cadastrar</button>
-        </form>
+    <footer class="Footer">
+      <div class="Offers">
+        <div class="Offers__Grid">
+          <div class="Offers__News">
+            <div class="Offers__Form" action="/">
+              <div class="Form__Container">
+                <p class="Form__Text">Receba ofertas e novidades por e-mail</p>
+                <div class="Input__Containers">
+                  <div class="Form__Filter">
+                    <input class="Form__Input" placeholder="Interesses" />
+                    <img class="Form__Img" src="assets/arrowdown.svg" />
+                  </div>
+                  <div class="Form__Email">
+                    <input
+                      class="Form__Input--Email"
+                      type="email"
+                      placeholder="Digite aqui seu e-mail"
+                    />
+                    <p class="Form__Text">@</p>
+                  </div>
+                </div>
+                <div class="Form__Button__Container">
+                <button class="Form__Button" type="submit">Cadastrar</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="Mobile__Apps">
+            <p class="Mobile__Text">Baixe nosso App</p>
+            <div class="Mobile__Container">
+              <img
+                class="Mobile__Img"
+                src="assets/google-play.webp"
+                alt="Google Play"
+              />
+              <img
+                class="Mobile__Img"
+                src="assets/app-store.webp"
+                alt="App Store"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="mobile-apps">
-        <p>Baixe nosso App</p>
-        <img src="assets/google-play.webp" alt="Google Play" />
-        <img src="assets/app-store.webp" alt="App Store" />
+      <div class="Contacts__Mobile">
+          <div class="Contacts__Item">
+            <img
+              class="Contacts__Img"
+              src="assets/ico-attendance.svg"
+              alt="Atendimento"
+            />
+            <p class="Contacts__Text">Atendimento</p>
+          </div>
+          <div class="Contacts__Item">
+            <img
+              class="Contacts__Img"
+              src="assets/ico-faq.svg"
+              alt="Perguntas Frequentes"
+            />
+            <p class="Contacts__Text">Perguntas Frequentes</p>
+          </div>
+          <div class="Contacts__Item">
+            <img
+              class="Contacts__Img"
+              src="assets/ico-invoice-and-statement.svg"
+              alt="Fatura e Extrato"
+            />
+            <p class="Contacts__Text">Fatura e Extrato</p>
+          </div>
+          <div class="Contacts__Item">
+            <img
+              class="Contacts__Img"
+              src="assets/ico-work-with-us.svg"
+              alt="Trabalhe Conosco"
+            />
+            <p class="Contacts__Text">Trabalhe Conosco</p>
+          </div>
       </div>
-      <div class="contacts">
-        <div>
-          <img width="50px" src="assets/ico-attendance.svg" alt="Atendimento" />
-          <p>Atendimento</p>
-        </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-faq.svg"
-            alt="Perguntas Frequentes"
-          />
-          <p>Perguntas Frequentes</p>
-        </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-invoice-and-statement.svg"
-            alt="Fatura e Extrato"
-          />
-          <p>Fatura e Extrato</p>
-        </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-work-with-us.svg"
-            alt="Trabalhe Conosco"
-          />
-          <p>Trabalhe Conosco</p>
-        </div>
-      </div>
-      <div class="links">
-        <ul>
-          <li>
-            <div>
-              <h3>Cartão Riachuelo</h3>
-              <ul>
-                <li><a href="">Midway Financeira</a></li>
-                <li><a href="">Saiba como adquirir</a></li>
-                <li><a href="">Veja sua fatura e extrato</a></li>
-                <li><a href="">Buscando quitar suas dívidas?</a></li>
+      <div class="Contacts">
+        <div class="Contacts__Container">
+          <div class="Contacts__Grid">
+            <div class="Contacts__Service">
+              <div class="Contacts__Item">
+                <img
+                  class="Contacts__Img"
+                  src="assets/ico-attendance.svg"
+                  alt="Atendimento"
+                />
+                <p class="Contacts__Text">Atendimento</p>
+              </div>
+              <div class="Contacts__Item">
+                <img
+                  class="Contacts__Img"
+                  src="assets/ico-faq.svg"
+                  alt="Perguntas Frequentes"
+                />
+                <p class="Contacts__Text">Perguntas Frequentes</p>
+              </div>
+              <div class="Contacts__Item">
+                <img
+                  class="Contacts__Img"
+                  src="assets/ico-invoice-and-statement.svg"
+                  alt="Fatura e Extrato"
+                />
+                <p class="Contacts__Text">Fatura e Extrato</p>
+              </div>
+              <div class="Contacts__Item">
+                <img
+                  class="Contacts__Img"
+                  src="assets/ico-work-with-us.svg"
+                  alt="Trabalhe Conosco"
+                />
+                <p class="Contacts__Text">Trabalhe Conosco</p>
+              </div>
+            </div>
+            <hr class="Contacts__Separator"></hr>
+            <div class="Contacts__Links">
+              <ul class="Contacts__Lists">
+                <li class="Contacts__Group">
+                  <div>
+                    <h3 class="Group__Title">Cartão Riachuelo</h3>
+                    <ul class="Group__List">
+                      <li class="Group__Item"><a class="Group__Links" href="">Midway Financeira</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Saiba como adquirir</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Veja sua fatura e extrato</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Buscando quitar suas dívidas?</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="Contacts__Group">
+                  <div>
+                    <h3 class="Group__Title">Sobre a Riachuelo</h3>
+                    <ul class="Group__List">
+                      <li class="Group__Item"><a class="Group__Links" href="">A Empresa</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Portal de Fornecedores</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Relação com Investidores</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Assessoria de Imprensa</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Trabalhe Conosco</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Programa Jovem Aprendiz</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Cadastro de Startups</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Mapa do Site</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Guide Shop</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Venda na Riachuelo Marketplace</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="Contacts__Group">
+                  <div>
+                    <h3 class="Group__Title">Moda que Transforma</h3>
+                    <ul class="Group__List">
+                      <li class="Group__Item"><a class="Group__Links" href="">Na prática</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Entre Costuras</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Jeans Mais Transparente</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Ações Covid-19</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Free Free</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="Contacts__Group">
+                  <div>
+                    <h3 class="Group__Title">Ajuda</h3>
+                    <ul class="Group__List">
+                      <li class="Group__Item"><a class="Group__Links" href="">Atendimento</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Perguntas Frequentes</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Trocas e Devoluções</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Portal da Privacidade</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Política de Privacidade</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Termos e Condições de Uso</a></li>
+                      <li class="Group__Item"><a class="Group__Links" href="">Regras e Resultados de Sorteios</a></li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </div>
-          </li>
-          <li>
-            <div>
-              <h3>Sobre a Riachuelo</h3>
-              <ul>
-                <li><a href="">A Empresa</a></li>
-                <li><a href="">Portal de Fornecedores</a></li>
-                <li><a href="">Relação com Investidores</a></li>
-                <li><a href="">Assessoria de Imprensa</a></li>
-                <li><a href="">Trabalhe Conosco</a></li>
-                <li><a href="">Programa Jovem Aprendiz</a></li>
-                <li><a href="">Cadastro de Startups</a></li>
-                <li><a href="">Mapa do Site</a></li>
-                <li><a href="">Guide Shop</a></li>
-                <li><a href="">Venda na Riachuelo Marketplace</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Moda que Transforma</h3>
-              <ul>
-                <li><a href="">Na prática</a></li>
-                <li><a href="">Entre Costuras</a></li>
-                <li><a href="">Jeans Mais Transparente</a></li>
-                <li><a href="">Ações Covid-19</a></li>
-                <li><a href="">Free Free</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Ajuda</h3>
-              <ul>
-                <li><a href="">Atendimento</a></li>
-                <li><a href="">Perguntas Frequentes</a></li>
-                <li><a href="">Trocas e Devoluções</a></li>
-                <li><a href="">Portal da Privacidade</a></li>
-                <li><a href="">Política de Privacidade</a></li>
-                <li><a href="">Termos e Condições de Uso</a></li>
-                <li><a href="">Regras e Resultados de Sorteios</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div class="Links__Mobile">
+          <ul class="Mobile__Lists">
+            <li class="Contacts__Group">
+              <div class="Mobile__Group__Container">
+                <input class="Mobile__Input" type="checkbox" id="Mobile__Card" />
+                <label for="Mobile__Card">
+                <div class="Mobile__Menu">
+                  <img class="Mobile__Expand" src="assets/expand.svg" id="Card__Expand"/>
+                  <img class="Mobile__Collapse" src="assets/collapse.svg" id="Card__Collapse"/>
+                  <h3 class="Mobile__Title">Cartão Riachuelo</h3>
+                </div>
+                </label>
+                <ul class="Mobile__List" id="Card__List">
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Midway Financeira</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Saiba como adquirir</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Veja sua fatura e extrato</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Buscando quitar suas dívidas?</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="Contacts__Group">
+              <div class="Mobile__Group__Container">
+                <input class="Mobile__Input" type="checkbox" id="Mobile__About" />
+                <label for="Mobile__About">
+                    <div class="Mobile__Menu">
+                  <img class="Mobile__Expand" src="assets/expand.svg" id="About__Expand"/>
+                  <img class="Mobile__Collapse" src="assets/collapse.svg" id="About__Collapse"/>
+                  <h3 class="Mobile__Title">Sobre a Riachuelo</h3>
+                </div>
+              </label>
+                <ul class="Mobile__List" id="About__List">
+                  <li class="Group__Item"><a class="Mobile__Links" href="">A Empresa</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Portal de Fornecedores</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Relação com Investidores</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Assessoria de Imprensa</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Trabalhe Conosco</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Programa Jovem Aprendiz</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Cadastro de Startups</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Mapa do Site</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Guide Shop</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Venda na Riachuelo Marketplace</a></li>
+                </ul>
+              </div class="Mobile__Group__Container">
+            </li>
+            <li class="Contacts__Group">
+              <div class="Mobile__Group__Container">
+                <input class="Mobile__Input" type="checkbox" id="Mobile__Fashion" />
+                <label for="Mobile__Fashion">
+                <div class="Mobile__Menu">
+                  <img class="Mobile__Expand" src="assets/expand.svg" id="Fashion__Expand"/>
+                  <img class="Mobile__Collapse" src="assets/collapse.svg" id="Fashion__Collapse"/>
+                  <h3 class="Mobile__Title">Moda que Transforma</h3>
+                </div>
+              </label>
+                <ul class="Mobile__List" id="Fashion__List">
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Na prática</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Entre Costuras</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Jeans Mais Transparente</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Ações Covid-19</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Free Free</a></li>
+                </ul>
+              </div class="Mobile__Group__Container">
+            </li>
+            <li class="Contacts__Group">
+              <div class="Mobile__Group__Container">
+                <input class="Mobile__Input" type="checkbox" id="Mobile__Help" />
+                <label for="Mobile__Help">
+                <div class="Mobile__Menu">
+                  <img class="Mobile__Expand" src="assets/expand.svg" id="Help__Expand"/>
+                  <img class="Mobile__Collapse" src="assets/collapse.svg" id="Help__Collapse"/>
+                  <h3 class="Mobile__Title">Ajuda</h3>
+                </div>
+              </label>
+                <ul class="Mobile__List" id="Help__List">
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Atendimento</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Perguntas Frequentes</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Trocas e Devoluções</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Portal da Privacidade</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Política de Privacidade</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Termos e Condições de Uso</a></li>
+                  <li class="Group__Item"><a class="Mobile__Links" href="">Regras e Resultados de Sorteios</a></li>
+                </ul>
+              </div>
+              <li class="Contacts__Group">
+                <div class="Mobile__Group__Container">
+                  <input class="Mobile__Input" type="checkbox" id="Mobile__Payment" />
+                  <label for="Mobile__Payment">
+                  <div class="Mobile__Menu">
+                    <img class="Mobile__Expand" src="assets/expand.svg" id="Payment__Expand"/>
+                    <img class="Mobile__Collapse" src="assets/collapse.svg" id="Payment__Collapse"/>
+                    <h3 class="Mobile__Title">Formas de Pagamento</h3>
+                  </div>
+                </label>
+                  <ul class="Mobile__List" id="Payment__List">
+                    <li class="Group__Item">
+                      <p class="Payment__Text">Cartões Riachuelo</p>
+                      <div>
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-rchlo1.webp" alt="" />
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-rchlo2.webp" alt="" />
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-rchlo3.webp" alt="" />
+                      </div>
+                    </li>
+                    <li class="Group__Item">
+                      <p class="Payment__Text">Cartões de Crédito</p>
+                      <div>
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-visa.png" alt="" />
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-master.webp" alt="" />
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-amex.webp" alt="" />
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-diners.png" alt="" />
+                        <img class="Mobile__Payment__Card" src="assets/ico-cartao-elo.png" alt="" />
+                      </div>
+                    </li>
+                    <li class="Mobile__Item">
+                      <p class="Payment__Text">Boleto</p>
+                      <div>
+                        <img class="Mobile__Payment__Card" src="assets/ico-boleto.webp" alt="" />
+                      </div>
+                    </li>
+                    <li class="Group__Item">
+                      <p class="Payment__Text">Outras Formas de Pagamento</p>
+                    </li>
+                  </ul>
+                </div class="Mobile__Group__Container">
+              </li>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="payment">
-        <h3>Formas de Pagamento</h3>
-        <img src="assets/ico-cartao-rchlo1.webp" alt="" />
-        <img src="assets/ico-cartao-rchlo2.webp" alt="" />
-        <img src="assets/ico-cartao-rchlo3.webp" alt="" />
-        <img src="assets/ico-cartao-visa.png" alt="" />
-        <img src="assets/ico-cartao-master.webp" alt="" />
-        <img src="assets/ico-cartao-amex.webp" alt="" />
-        <img src="assets/ico-cartao-diners.png" alt="" />
-        <img src="assets/ico-cartao-elo.png" alt="" />
-        <img src="assets/ico-boleto.webp" alt="" />
-        <img src="assets/ico-paypal.png" alt="" />
+      <div class="Payment">
+        <div class="Payment__Methodos">
+        <h3 class="Payment__Title">Formas de Pagamento</h3>
+        <img class="Payment__Card" src="assets/ico-cartao-rchlo1.webp" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-rchlo2.webp" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-rchlo3.webp" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-visa.png" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-master.webp" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-amex.webp" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-diners.png" alt="" />
+        <img class="Payment__Card" src="assets/ico-cartao-elo.png" alt="" />
+        <img class="Payment__Card" src="assets/ico-boleto.webp" alt="" />
+        <img class="Payment__Card" src="assets/ico-paypal.png" alt="" />
       </div>
-      <div class="social">
-        <h3>Siga a Riachuelo</h3>
-        <img src="assets/ico-facebook.svg" alt="" />
-        <img src="assets/ico-instagram.svg" alt="" />
-        <p>RCHLO</p>
-        <img src="assets/ico-instagram.svg" alt="" />
-        <p>CASA RCHLO</p>
-        <img src="assets/ico-pinterest.svg" alt="" />
-        <img src="assets/ico-twitter.svg" alt="" />
-        <img src="assets/ico-youtube.svg" alt="" />
-        <img src="assets/ico-linkedin.svg" alt="" />
+      <div class="Social">
+        <h3 class="Social__Title">Siga a Riachuelo</h3>
+        <ul class="Social__List">
+        <li class="Social__Item"><img class="Social__Img" src="assets/ico-facebook.svg" alt="" /></li>
+        <li class="Social__Item">
+          <img class="Social__Img" src="assets/ico-instagram.svg" alt="" />
+        <p class="Social__Name">RCHLO</p>
+      </li>
+      <li class="Social__Item">
+        <img class="Social__Img" src="assets/ico-instagram.svg" alt="" />
+        <p class="Social__Name">CASA<br/>RCHLO</p>
+      </li>
+        <li class="Social__Item"><img class="Social__Img" src="assets/ico-pinterest.svg" alt="" /></li>
+        <li class="Social__Item"><img class="Social__Img" src="assets/ico-twitter.svg" alt="" /></li>
+        <li class="Social__Item"><img class="Social__Img" src="assets/ico-youtube.svg" alt="" /></li>
+        <li class="Social__Item"><img class="Social__Img" src="assets/ico-linkedin.svg" alt="" /></li>
+      </ul>
       </div>
-      <div class="accessibility">
-        <h3>Acessibilidade</h3>
-        <img src="assets/ico-a11y.webp" alt="" />
+      <div class="Accessibility">
+        <h3 class="Accessibility__Title">Acessibilidade</h3>
+        <img class="Accessibility__Img" src="assets/ico-a11y.webp" alt="" />
       </div>
-      <div class="copyright">
-        <p>
+    </div>
+    <div class="Copy">
+      <div class="Copy__Container">
+      <div class="Copyright">
+        <p class="Copyright__Text">
           © Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo
-          S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil CEP
-          07250-130 CNPJ 33.200.056/0441-97 | IE 796.420.926.112 | SAC
+          S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil
+          <br/>
+          CEP 07250-130 CNPJ 33.200.056/0441-97 | IE 796.420.926.112 | SAC
           4003-0515.Direção de fotografia de produtos por Adriano Adrião.
+          <br/>
           Pagamento com Cartão Riachuelo, parcelas mínimas de R$ 15,00. Para os
           demais cartões Visa, Mastercard, Elo, Diners, Hipercard e American
-          Express, parcelas mínimas de R$ 30,00. * COMPRE NO SITE e RETIRE NA
-          LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte as lojas
+          Express, parcelas mínimas de R$ 30,00.
+          <br/>
+          * COMPRE NO SITE e RETIRE NA LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte as lojas
           participantes nas opções de frete do seu pedido, conforme CEP de
-          entrega cadastrado. Frete único de R$ 4,99 para Sul e Sudeste em
+          entrega cadastrado.
+          <br/>
+          Frete único de R$ 4,99 para Sul e Sudeste em
           compras a partir de R$ 129,00. Demais regiões o valor estará sujeito a
           variações. Condição por tempo indeterminado, para tipo de entrega
-          “normal”. Preços, promoções, condições de pagamento, valores de frete
+          “normal”.
+          <br/>
+          Preços, promoções, condições de pagamento, valores de frete
           e disponibilidade de estoque são aplicados somente nas compras
           efetuadas na loja online Riachuelo. Existe uma limitação de peças
-          iguais no mesmo pedido que muda de acordo com o tipo de produto. Em
-          caso de divergência de valores entre a página do produto e a Sacola de
+          iguais no mesmo pedido que muda de acordo com o tipo de produto.
+          <br/>
+          Em caso de divergência de valores entre a página do produto e a Sacola de
           Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola
           de Compras.
+          <br/>
         </p>
+        <p class="Copy__Text--Mobile">© Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil<br/>
+          CEP 07250-130 CNPJ 33.200.056/0441-97 | IE 796.420.926.112 | SAC 4003-0515.</p>
+          <div class="Copy__More">
+          <input class="More__Input" type="checkbox" id="More__btn"/>
+          <label class="More__Label" for="More__btn">
+            Ler mais
+          </label>
+          <p class="More__Text" id="Copyright-Section">Direção de fotografia de produtos por Adriano Adrião.Pagamento com Cartão Riachuelo, parcelas mínimas de R$ 15,00. Para os demais cartões Visa, Mastercard, Elo, Diners, Hipercard e American Express, parcelas mínimas de R$ 30,00.* COMPRE NO SITE e RETIRE NA LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte as lojas participantes nas opções de frete do seu pedido, conforme CEP de entrega cadastrado.Frete único de R$ 4,99 para Sul e Sudeste em compras a partir de R$ 129,00. Demais regiões o valor estará sujeito a variações. Condição por tempo indeterminado, para tipo de entrega “normal”.Preços, promoções, condições de pagamento, valores de frete e disponibilidade de estoque são aplicados somente nas compras efetuadas na loja online Riachuelo. Existe uma limitação de peças iguais no mesmo pedido que muda de acordo com o tipo de produto.Em caso de divergência de valores entre a página do produto e a Sacola de Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola de Compras.</p>
+        </div>
       </div>
-      <div class="complaints">
-        <img src="assets/ra1000.webp" alt="" />
+      <div class="Complaints">
+        <img class="Complaints__Img" src="assets/ra1000.webp" alt="" />
       </div>
+      </div>
+    </div>
     </footer>
   </body>
 </html>
